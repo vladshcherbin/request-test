@@ -2,8 +2,10 @@
   "name": "request-test",
   "version": "1.0.0",
   "main": "index.js",
+  "packageManager": "pnpm@9.7.0",
   "engines": {
-    "node": "20.x"
+    "node": "20.x",
+    "pnpm": "9.x"
   },
   "type": "module",
   "private": true
