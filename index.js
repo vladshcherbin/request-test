@@ -16,12 +16,14 @@ app.use(async ctx => {
   
   const brandsResponse = await fetch('https://api.av.by/offer-types/cars/catalog/brand-items', {
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36'
     },
     method: 'GET'
   })
   
   console.log(brandsResponse)
+  console.log(await brandsResponse.json())
 
   ctx.body = 'Hello World'
 })
