@@ -21,9 +21,14 @@ app.use(async ctx => {
     },
     method: 'GET'
   })
+
+  if (brandsResponse.ok) {
+    console.log(await brandsResponse.json())
+  } else {
+    console.log('brands request error')
+    console.log(brandsResponse)
+  }
   
-  console.log(brandsResponse)
-  console.log(await brandsResponse.json())
 
   ctx.body = 'Hello World'
 })
